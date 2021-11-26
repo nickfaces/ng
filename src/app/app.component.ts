@@ -26,5 +26,10 @@ export class AppComponent implements OnDestroy {
     this.inputValue = event.target.value
   }
 
+  onClick(){
+
+    console.log('Click')
+  }
+
 }
 

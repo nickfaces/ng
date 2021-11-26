@@ -6,6 +6,7 @@ import {PostCompoment} from "./post/post.compoment";
 import { Post2Component } from './post2/post2.component';
 import {Post4Component} from "./post4/post4.component";
 import {SsssService} from "./ssss.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {SsssService} from "./ssss.service";
     Post4Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [SsssService],
   bootstrap: [AppComponent]
