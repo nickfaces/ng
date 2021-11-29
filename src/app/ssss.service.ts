@@ -10,8 +10,8 @@ export class SsssService {
   destroy$ = new Subject();
   constructor(private http: HttpClient) { }
 
-  ttt(): Observable<Bla> {
-    return this.http.get<Bla>('http://127.0.0.1:8000/api/todo', )
+  ttt(): Observable<Bla[]> {
+    return this.http.get<Bla[]>('http://127.0.0.1:8000/api/todo', )
       .pipe(
         takeUntil(this.destroy$),
       );
