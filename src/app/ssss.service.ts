@@ -11,7 +11,7 @@ export class SsssService {
   constructor(private http: HttpClient) { }
 
   ttt(): Observable<Bla[]> {
-    return this.http.get<Bla[]>('http://127.0.0.1:8000/api/todo', )
+    return this.http.get<Bla[]>('http://localhost:5000/todo/api/v1.0/tasks', )
       .pipe(
         takeUntil(this.destroy$),
       );
