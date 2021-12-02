@@ -11,7 +11,8 @@ import {Bla} from "./interfaces/bla";
 export class AppComponent implements OnDestroy {
 
   title = 'Chalet';
-  inputValue = '';
+  email = '';
+  password = '';
   bla: Bla[] = []
   constructor(public service: SsssService) {
     service.ttt().subscribe()
@@ -23,14 +24,20 @@ export class AppComponent implements OnDestroy {
   }
 
   onInput(event: any) {
-    console.log('Event', event)
-    this.inputValue = event.target.value
+    console.log('E-mail', event)
+    this.email = event.target.value
   }
+
+  inputPassword(event: any) {
+    console.log('Password', event)
+    this.password = event.target.value
+  }
+
 
   onClick(){
     this.service.ttt().subscribe(response => {
       this.bla = response
-      this.inputValue = JSON.stringify(this.bla)
+      this.email = JSON.stringify(this.bla)
     })
     console.log('Click', this.bla)
   }
